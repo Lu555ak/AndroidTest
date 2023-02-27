@@ -21,7 +21,28 @@
             android:id="@+id/textViewCounter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello Luka!"
+            android:text="0"
             android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UP" />
+
+        <Button
+            android:id="@+id/buttonDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOWN" />
+
+        <EditText
+            android:id="@+id/plainTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Name" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
