@@ -7,14 +7,23 @@
     tools:context=".SuccessActivity">
 
     <LinearLayout
+        android:background="@drawable/running_abstract"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND" />
+
         <TextView
             android:id="@+id/textViewMessage"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

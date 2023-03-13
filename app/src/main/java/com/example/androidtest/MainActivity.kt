@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextMenu
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -27,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         buttonUp = findViewById(R.id.buttonUp)
         buttonDown = findViewById(R.id.buttonDown)
         plainTextField = findViewById(R.id.plainTextField)
+
+        registerForContextMenu(textViewCounter)
+        textViewCounter.setOnClickListener { v -> openContextMenu(v)}
 
         buttonUp.setOnClickListener() {
             count++;
@@ -81,5 +88,41 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onDestroy")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        val menuInflater = menuInflater
+        menuInflater.inflate(R.menu.menu_float, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.restore_counter -> {
+                count = 0
+                textViewCounter.text = count.toString()
+                true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.restore_counter){
+            count = 0
+            textViewCounter.text = count.toString()
+        }
+
+        return super.onContextItemSelected(item)
     }
 }

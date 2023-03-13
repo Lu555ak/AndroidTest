@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:orientation="vertical"
+        android:background="@drawable/running_abstract"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +19,12 @@
 
         <TextView
             android:id="@+id/textViewCounter"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?colorSecondary"
             android:text="0"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="?colorOnSecondary" />
 
         <Button
             android:id="@+id/buttonUp"
@@ -41,6 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="?colorSecondary"
+            android:textColor="?colorOnSecondary"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:text="Name" />
