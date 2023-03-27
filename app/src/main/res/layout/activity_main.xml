@@ -48,5 +48,11 @@
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:text="Name" />
+
+        <Button
+            android:id="@+id/highscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highscore" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

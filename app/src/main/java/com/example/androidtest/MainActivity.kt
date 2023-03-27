@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var buttonUp: Button
     lateinit var buttonDown: Button
     lateinit var plainTextField: EditText
+    lateinit var highscore: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         buttonUp = findViewById(R.id.buttonUp)
         buttonDown = findViewById(R.id.buttonDown)
         plainTextField = findViewById(R.id.plainTextField)
+        highscore = findViewById(R.id.highscore)
 
         registerForContextMenu(textViewCounter)
         textViewCounter.setOnClickListener { v -> openContextMenu(v)}
@@ -44,6 +46,14 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, SuccessActivity::class.java)
                 intent.putExtra("name", plainTextField.text.toString())
                 startActivity(intent)
+            }
+
+        highscore.setOnClickListener{
+
+            val intent = Intent(this, activity_high::class.java)
+
+            startActivity(intent)
+
             }
         }
 
