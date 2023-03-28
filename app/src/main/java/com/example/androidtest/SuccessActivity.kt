@@ -1,5 +1,6 @@
 package com.example.androidtest
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,6 +13,7 @@ class SuccessActivity : AppCompatActivity() {
     lateinit var textViewMessage: TextView
     lateinit var buttonSend: Button
 
+    @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
@@ -19,7 +21,7 @@ class SuccessActivity : AppCompatActivity() {
 
         textViewMessage = findViewById(R.id.textViewMessage)
         var name = intent.getStringExtra("name")
-        textViewMessage.text = "$name, congratulations on your 10 steps!"
+        textViewMessage.text = getString(R.string.success, name)
 
         buttonSend.setOnClickListener() {
             val uri: Uri = Uri.parse("smsto:0991234566")

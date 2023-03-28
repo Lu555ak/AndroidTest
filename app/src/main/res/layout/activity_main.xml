@@ -30,13 +30,13 @@
             android:id="@+id/buttonUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UP" />
+            android:text="@string/up"/>
 
         <Button
             android:id="@+id/buttonDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DOWN" />
+            android:text="@string/down" />
 
         <EditText
             android:id="@+id/plainTextField"
@@ -47,12 +47,12 @@
             android:textColor="?colorOnSecondary"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Name" />
+            android:text="@string/name" />
 
         <Button
             android:id="@+id/highscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Highscore" />
+            android:text="@string/highscore" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

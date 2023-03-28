@@ -17,7 +17,7 @@
             android:id="@+id/buttonSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SEND" />
+            android:text="@string/send" />
 
         <TextView
             android:id="@+id/textViewMessage"
@@ -25,5 +25,34 @@
             android:layout_height="wrap_content"
             android:background="?colorSecondary"
             android:textColor="?colorOnSecondary" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/n1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0991234566"
+                android:background="?colorSecondary"
+                android:textColor="?colorOnSecondary" />
+
+            <RadioButton
+                android:id="@+id/n2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0991234569"
+                android:background="?colorSecondary"
+                android:textColor="?colorOnSecondary" />
+
+            <RadioButton
+                android:id="@+id/n3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0981235895"
+                android:background="?colorSecondary"
+                android:textColor="?colorOnSecondary" />
+        </RadioGroup>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
