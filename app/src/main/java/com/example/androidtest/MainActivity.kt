@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.net.Inet4Address
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var buttonDown: Button
     lateinit var plainTextField: EditText
     lateinit var highscore: Button
+    lateinit var map: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         buttonDown = findViewById(R.id.buttonDown)
         plainTextField = findViewById(R.id.plainTextField)
         highscore = findViewById(R.id.highscore)
+        map = findViewById(R.id.map)
 
         registerForContextMenu(textViewCounter)
         textViewCounter.setOnClickListener { v -> openContextMenu(v)}
@@ -50,14 +53,16 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("name", plainTextField.text.toString())
                 startActivity(intent)
             }
+        }
 
         highscore.setOnClickListener{
-
             val intent = Intent(this, activity_high::class.java)
-
             startActivity(intent)
+        }
 
-            }
+        map.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
         }
 
         buttonDown.setOnClickListener() {

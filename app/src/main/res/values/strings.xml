@@ -11,4 +11,5 @@
     <string name="croatian">Croatian</string>
     <string name="english">English</string>
     <string name="success">%1$s, congratulations on your 10 steps!</string>
+    <string name="map">Map</string>
 </resources>
